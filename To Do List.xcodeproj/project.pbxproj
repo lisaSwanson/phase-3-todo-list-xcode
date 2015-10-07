@@ -13,6 +13,7 @@
 		C09196721BC3738A0061D27A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09196701BC3738A0061D27A /* Main.storyboard */; };
 		C09196741BC3738A0061D27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09196731BC3738A0061D27A /* Assets.xcassets */; };
 		C09196771BC3738A0061D27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09196751BC3738A0061D27A /* LaunchScreen.storyboard */; };
+		C091967F1BC378040061D27A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C091967E1BC378040061D27A /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C09196731BC3738A0061D27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C09196761BC3738A0061D27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C09196781BC3738A0061D27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C091967E1BC378040061D27A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C091967F1BC378040061D27A /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 		C091965E1BC3738A0061D27A = {
 			isa = PBXGroup;
 			children = (
+				C091967E1BC378040061D27A /* MessageUI.framework */,
 				C09196691BC3738A0061D27A /* To Do List */,
 				C09196681BC3738A0061D27A /* Products */,
 			);
@@ -98,6 +102,12 @@
 				TargetAttributes = {
 					C09196661BC3738A0061D27A = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = VKZ8W52X9X;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -250,10 +260,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "To Do List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lisadeeswanson.To-Do-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -261,10 +274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "To Do List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lisadeeswanson.To-Do-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
